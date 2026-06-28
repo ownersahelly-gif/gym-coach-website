@@ -9,9 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#8B2FC9",
-        "primary-dark": "#6B1FA0",
-        dark: "#0f0f0f",
+        primary: "#9B3FDE",
+        "primary-dark": "#7B2FBE",
+        "primary-light": "#C47AFF",
+        surface: "#141414",
+        "surface-2": "#1c1c1c",
+        "surface-3": "#242424",
+        border: "#2a2a2a",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],

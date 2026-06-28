@@ -2,24 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+* { box-sizing: border-box; padding: 0; margin: 0; }
+html { scroll-behavior: smooth; }
 
 body {
-  background: #fff;
-  color: #111;
+  background: #0d0d0d;
+  color: #f0f0f0;
   font-family: var(--font-inter), sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-::selection {
-  background: #8B2FC9;
-  color: #fff;
-}
+::selection { background: #8B2FC9; color: #fff; }
