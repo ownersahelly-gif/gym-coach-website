@@ -29,27 +29,12 @@ export default function Hero() {
 
         {/* Coach photo — full width, bottom of hero */}
         <div className="relative flex-1 min-h-[55vh] mt-4">
-          {/*
-            REPLACE the placeholder below with your actual photo:
-            Remove the placeholder div and uncomment the img tag:
-
-            <img
-              src="/hero-photo.jpg"
-              alt="Coach [Your Name]"
-              className="absolute inset-0 w-full h-full object-cover object-top"
-            />
-          */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-purple-950/40 to-black/80">
-            <span className="text-8xl opacity-20">📸</span>
-            <p className="text-white/20 text-sm mt-4 text-center">
-              Add hero-photo.jpg to /public/
-              <br />
-              <span className="text-xs">Full body photo works best</span>
-            </p>
-          </div>
-
-          {/* Purple decorative glow behind photo — like reference */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-primary opacity-20 blur-3xl pointer-events-none" />
+          <img
+            src="/hero-photo.jpg"
+            alt="Coach"
+            className="absolute inset-0 w-full h-full object-cover object-top"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         </div>
       </section>
 
