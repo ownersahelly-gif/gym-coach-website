@@ -2,39 +2,39 @@ export default function Hero() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative min-h-screen flex flex-col bg-black overflow-hidden">
+      <section className="relative min-h-screen flex flex-col overflow-hidden">
 
-        {/* Top text block */}
-        <div className="relative z-10 pt-28 pb-8 px-6 text-center">
+        {/* Full background photo */}
+        <img
+          src="/hero-photo.jpg"
+          alt="Coach"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+        />
+
+        {/* Dark overlay so text is readable */}
+        <div className="absolute inset-0 bg-black/55" />
+
+        {/* Text on top */}
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center pt-24 pb-16">
           <p className="text-white font-bold uppercase tracking-[0.15em] text-sm sm:text-base">
             Elite Fitness &amp; Nutrition Coaching By
           </p>
-          <h1 className="text-5xl sm:text-7xl font-black italic text-primary mt-1 leading-tight">
+          <h1 className="text-5xl sm:text-7xl font-black italic text-primary mt-2 leading-tight">
             {/* REPLACE with your name */}
             COACH NAME
           </h1>
-          <p className="text-white/60 text-base sm:text-lg mt-4 max-w-md mx-auto leading-relaxed">
+          <p className="text-white/70 text-base sm:text-lg mt-5 max-w-sm mx-auto leading-relaxed">
             Level up your body and mindset with training that delivers real, and lasting change.
           </p>
 
-          {/* JOIN NOW button — white rectangle with arrow like the reference */}
+          {/* JOIN NOW button — white rectangle, no rounded corners */}
           <a
             href="#contact"
-            className="inline-flex items-center gap-3 bg-white text-primary font-black text-base uppercase tracking-widest px-10 py-4 mt-8 hover:bg-gray-100 transition-colors"
+            className="inline-flex items-center gap-3 bg-white text-primary font-black text-base uppercase px-12 py-4 mt-8 hover:bg-gray-100 transition-colors"
             style={{ letterSpacing: "0.15em" }}
           >
             <span>→</span> Join Now
           </a>
-        </div>
-
-        {/* Coach photo — full width, bottom of hero */}
-        <div className="relative flex-1 min-h-[55vh] mt-4">
-          <img
-            src="/hero-photo.jpg"
-            alt="Coach"
-            className="absolute inset-0 w-full h-full object-cover object-top"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         </div>
       </section>
 
