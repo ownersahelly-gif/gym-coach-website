@@ -1,11 +1,5 @@
 import type { Service, Transformation, Post } from "./types";
 
-/*
-  STATIC PLACEHOLDER DATA
-  When you connect Supabase, replace each array with a fetch from your DB.
-  See lib/supabase.ts for the query examples.
-*/
-
 export const services: Service[] = [
   {
     id: "1",
@@ -41,32 +35,32 @@ export const transformations: Transformation[] = [
   {
     id: "1",
     name: "Ahmed K.",
-    before_image: "/placeholders/before1.jpg",
-    after_image: "/placeholders/after1.jpg",
+    before_image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop&q=80",
+    after_image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=500&fit=crop&q=80",
     duration: "12 weeks",
     result: "Lost 18 kg",
   },
   {
     id: "2",
     name: "Sara M.",
-    before_image: "/placeholders/before2.jpg",
-    after_image: "/placeholders/after2.jpg",
+    before_image: "https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=400&h=500&fit=crop&q=80",
+    after_image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=500&fit=crop&q=80",
     duration: "16 weeks",
-    result: "Lost 12 kg + toned",
+    result: "Lost 12 kg",
   },
   {
     id: "3",
     name: "Omar T.",
-    before_image: "/placeholders/before3.jpg",
-    after_image: "/placeholders/after3.jpg",
+    before_image: "https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?w=400&h=500&fit=crop&q=80",
+    after_image: "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=400&h=500&fit=crop&q=80",
     duration: "8 weeks",
     result: "Gained 6 kg muscle",
   },
   {
     id: "4",
     name: "Lina R.",
-    before_image: "/placeholders/before4.jpg",
-    after_image: "/placeholders/after4.jpg",
+    before_image: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=400&h=500&fit=crop&q=80",
+    after_image: "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=400&h=500&fit=crop&q=80",
     duration: "20 weeks",
     result: "Lost 22 kg",
   },
@@ -76,37 +70,37 @@ export const posts: Post[] = [
   {
     id: "1",
     title: "5 mistakes killing your progress at the gym",
-    image: "/placeholders/post1.jpg",
+    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop&q=80",
     instagram_url: "https://www.instagram.com/p/REPLACE_WITH_POST_ID/",
   },
   {
     id: "2",
     title: "What I eat in a day as a coach",
-    image: "/placeholders/post2.jpg",
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=400&fit=crop&q=80",
     instagram_url: "https://www.instagram.com/p/REPLACE_WITH_POST_ID/",
   },
   {
     id: "3",
     title: "The truth about cardio and fat loss",
-    image: "/placeholders/post3.jpg",
+    image: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=600&h=400&fit=crop&q=80",
     instagram_url: "https://www.instagram.com/p/REPLACE_WITH_POST_ID/",
   },
   {
     id: "4",
     title: "How to stay consistent when motivation fades",
-    image: "/placeholders/post4.jpg",
+    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop&q=80",
     instagram_url: "https://www.instagram.com/p/REPLACE_WITH_POST_ID/",
   },
   {
     id: "5",
     title: "3-day full body workout for beginners",
-    image: "/placeholders/post5.jpg",
+    image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&h=400&fit=crop&q=80",
     instagram_url: "https://www.instagram.com/p/REPLACE_WITH_POST_ID/",
   },
   {
     id: "6",
     title: "Sleep is your #1 recovery tool",
-    image: "/placeholders/post6.jpg",
+    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=400&fit=crop&q=80",
     instagram_url: "https://www.instagram.com/p/REPLACE_WITH_POST_ID/",
   },
 ];

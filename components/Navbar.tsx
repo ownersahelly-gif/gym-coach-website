@@ -22,7 +22,7 @@ export default function Navbar() {
             <span className="text-primary-light font-black text-xs">LOGO</span>
           </div>
           <div className="leading-tight">
-            <p className="text-white font-black text-base tracking-wide">COACH NAME</p>
+            <p className="text-white font-black text-base tracking-wide">OLA VOLOSHINA</p>
             <p className="text-purple-400/60 text-[10px] tracking-widest uppercase">Shape your story</p>
           </div>
         </a>

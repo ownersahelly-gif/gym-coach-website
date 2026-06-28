@@ -16,7 +16,7 @@ export default function Hero() {
             Elite Fitness &amp; Nutrition Coaching By
           </p>
           <h1 className="text-5xl sm:text-7xl font-black italic text-primary-light mt-2 leading-tight drop-shadow-lg">
-            COACH NAME
+            OLA VOLOSHINA
           </h1>
           <p className="text-white/60 text-base sm:text-lg mt-5 max-w-sm mx-auto leading-relaxed">
             Level up your body and mindset with training that delivers real, and lasting change.
@@ -57,7 +57,7 @@ export default function Hero() {
                 <br /><span className="text-primary-light">Your Partner</span> in Change
               </h2>
               <p className="text-white/50 text-lg leading-relaxed mb-4">
-                I&apos;m <strong className="text-white">[Your Name]</strong>, a certified personal
+                I&apos;m <strong className="text-white">Ola Voloshina</strong>, a certified personal
                 trainer and nutrition coach with over 5 years of experience helping
                 people transform their bodies and reclaim their confidence.
               </p>
