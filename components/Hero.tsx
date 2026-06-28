@@ -2,72 +2,54 @@ export default function Hero() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/*
-          REPLACE THIS with your own photo:
-          Add your image as public/hero-bg.jpg and uncomment the img below,
-          then delete the gradient div.
+      <section className="relative min-h-screen flex flex-col bg-black overflow-hidden">
 
-          <img
-            src="/hero-bg.jpg"
-            alt="hero background"
-            className="absolute inset-0 w-full h-full object-cover object-top"
-          />
-        */}
-        {/* Placeholder gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-950 to-gray-900" />
-
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/60" />
-
-        {/* Content */}
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <p className="text-primary font-bold tracking-[0.25em] uppercase text-sm mb-4">
-            Elite Fitness &amp; Nutrition Coaching
+        {/* Top text block */}
+        <div className="relative z-10 pt-28 pb-8 px-6 text-center">
+          <p className="text-white font-bold uppercase tracking-[0.15em] text-sm sm:text-base">
+            Elite Fitness &amp; Nutrition Coaching By
           </p>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-6">
-            Level Up Your Body
-            <br />
-            <span className="text-primary">&amp; Mindset</span>
+          <h1 className="text-5xl sm:text-7xl font-black italic text-primary mt-1 leading-tight">
+            {/* REPLACE with your name */}
+            COACH NAME
           </h1>
-          <p className="text-white/70 text-lg sm:text-xl max-w-xl mx-auto mb-10 leading-relaxed">
-            Training that delivers real, and lasting change.
-            No shortcuts — just a proven system built around you.
+          <p className="text-white/60 text-base sm:text-lg mt-4 max-w-md mx-auto leading-relaxed">
+            Level up your body and mindset with training that delivers real, and lasting change.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#contact"
-              className="bg-primary hover:bg-primary-dark text-white font-black text-lg px-10 py-4 rounded-full transition-all hover:scale-105 active:scale-95"
-            >
-              Join Now
-            </a>
-            <a
-              href="#transformations"
-              className="border-2 border-white/50 hover:border-white text-white font-semibold text-lg px-10 py-4 rounded-full transition-all"
-            >
-              See Results
-            </a>
-          </div>
 
-          {/* Stats */}
-          <div className="flex justify-center gap-12 mt-16 border-t border-white/15 pt-10">
-            {[
-              { n: "200+", label: "Clients Transformed" },
-              { n: "95%", label: "Success Rate" },
-              { n: "5+", label: "Years Experience" },
-            ].map((s) => (
-              <div key={s.label} className="text-center">
-                <p className="text-3xl font-black text-primary">{s.n}</p>
-                <p className="text-white/50 text-xs mt-1 uppercase tracking-wider">{s.label}</p>
-              </div>
-            ))}
-          </div>
+          {/* JOIN NOW button — white rectangle with arrow like the reference */}
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-3 bg-white text-primary font-black text-base uppercase tracking-widest px-10 py-4 mt-8 hover:bg-gray-100 transition-colors"
+            style={{ letterSpacing: "0.15em" }}
+          >
+            <span>→</span> Join Now
+          </a>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-40">
-          <span className="text-white text-xs tracking-widest uppercase">Scroll</span>
-          <div className="w-px h-8 bg-white animate-pulse" />
+        {/* Coach photo — full width, bottom of hero */}
+        <div className="relative flex-1 min-h-[55vh] mt-4">
+          {/*
+            REPLACE the placeholder below with your actual photo:
+            Remove the placeholder div and uncomment the img tag:
+
+            <img
+              src="/hero-photo.jpg"
+              alt="Coach [Your Name]"
+              className="absolute inset-0 w-full h-full object-cover object-top"
+            />
+          */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-purple-950/40 to-black/80">
+            <span className="text-8xl opacity-20">📸</span>
+            <p className="text-white/20 text-sm mt-4 text-center">
+              Add hero-photo.jpg to /public/
+              <br />
+              <span className="text-xs">Full body photo works best</span>
+            </p>
+          </div>
+
+          {/* Purple decorative glow behind photo — like reference */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-primary opacity-20 blur-3xl pointer-events-none" />
         </div>
       </section>
 
@@ -78,7 +60,7 @@ export default function Hero() {
             {/* Photo */}
             <div className="flex-shrink-0 w-full lg:w-auto">
               {/*
-                REPLACE this placeholder with your actual photo:
+                REPLACE with your photo:
                 <img
                   src="/coach-photo.jpg"
                   alt="Coach [Your Name]"
@@ -116,7 +98,6 @@ export default function Hero() {
                 just reach your goal, you stay there for life.
               </p>
 
-              {/* Credential badges */}
               <div className="flex flex-wrap gap-3">
                 {[
                   "Certified Personal Trainer",

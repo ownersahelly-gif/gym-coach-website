@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const links = [
   { label: "Home", href: "#" },
@@ -11,75 +11,53 @@ const links = [
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white shadow-md"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#2d1b4e]">
+      <div className="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between">
         {/* Logo */}
-        <a
-          href="#"
-          className={`font-black text-2xl tracking-tight transition-colors ${
-            scrolled ? "text-dark" : "text-white"
-          }`}
-        >
-          COACH<span className="text-primary">FIT</span>
+        <a href="#" className="flex items-center gap-3">
+          {/*
+            REPLACE with your actual logo:
+            <img src="/logo.png" alt="Logo" className="h-12 w-auto" />
+          */}
+          <div className="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center">
+            <span className="text-white font-black text-sm">LOGO</span>
+          </div>
+          <div className="leading-tight">
+            <p className="text-white font-black text-base tracking-wide">COACH NAME</p>
+            <p className="text-white/50 text-[10px] tracking-widest uppercase">Shape your story</p>
+          </div>
         </a>
 
-        {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                scrolled ? "text-gray-700" : "text-white/90"
-              }`}
-            >
-              {l.label}
-            </a>
-          ))}
-          <a
-            href="#contact"
-            className="bg-primary text-white text-sm font-bold px-6 py-2.5 rounded-full hover:bg-primary-dark transition-colors"
+        {/* Right icons */}
+        <div className="flex items-center gap-5">
+          <button className="text-white/80 hover:text-white" aria-label="Search">
+            <svg viewBox="0 0 24 24" className="w-5 h-5 fill-none stroke-current" strokeWidth="2">
+              <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" strokeLinecap="round" />
+            </svg>
+          </button>
+          <button
+            className="text-white/80 hover:text-white"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menu"
           >
-            Join Now
-          </a>
+            <svg viewBox="0 0 24 24" className="w-6 h-6 fill-none stroke-current" strokeWidth="2">
+              <path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round" />
+            </svg>
+          </button>
         </div>
-
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden flex flex-col gap-1.5"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span className={`block w-6 h-0.5 transition-all ${scrolled ? "bg-dark" : "bg-white"} ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`block w-6 h-0.5 transition-all ${scrolled ? "bg-dark" : "bg-white"} ${menuOpen ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-0.5 transition-all ${scrolled ? "bg-dark" : "bg-white"} ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
-        </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Dropdown menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white shadow-lg px-6 pb-6 flex flex-col gap-4 pt-4">
+        <div className="bg-[#2d1b4e] border-t border-white/10 px-6 pb-6 flex flex-col gap-4 pt-4">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-gray-800 font-medium text-base hover:text-primary"
+              className="text-white/80 hover:text-white font-medium text-base"
               onClick={() => setMenuOpen(false)}
             >
               {l.label}
