@@ -1,113 +1,148 @@
-import Image from "next/image";
-
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-      {/* Background texture */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#1a1a1a_0%,_#0a0a0a_70%)]" />
-      <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(0deg,transparent,transparent 40px,#fff 40px,#fff 41px),repeating-linear-gradient(90deg,transparent,transparent 40px,#fff 40px,#fff 41px)",
-        }}
-      />
+    <>
+      {/* ── HERO ── */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/*
+          REPLACE THIS with your own photo:
+          Add your image as public/hero-bg.jpg and uncomment the img below,
+          then delete the gradient div.
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-16 w-full">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          <img
+            src="/hero-bg.jpg"
+            alt="hero background"
+            className="absolute inset-0 w-full h-full object-cover object-top"
+          />
+        */}
+        {/* Placeholder gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-950 to-gray-900" />
 
-          {/* Left — text */}
-          <div className="flex-1 text-center lg:text-left">
-            <p className="section-label mb-4">Online Fitness Coaching</p>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight mb-6">
-              LEVEL UP YOUR
-              <br />
-              <span className="text-accent">BODY &amp;</span>
-              <br />
-              MINDSET
-            </h1>
-            <p className="text-white/60 text-lg max-w-md mx-auto lg:mx-0 mb-8 leading-relaxed">
-              Real plans. Real accountability. Real results.
-              <br />
-              No fluff — just a system that works.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/60" />
+
+        {/* Content */}
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+          <p className="text-primary font-bold tracking-[0.25em] uppercase text-sm mb-4">
+            Elite Fitness &amp; Nutrition Coaching
+          </p>
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-6">
+            Level Up Your Body
+            <br />
+            <span className="text-primary">&amp; Mindset</span>
+          </h1>
+          <p className="text-white/70 text-lg sm:text-xl max-w-xl mx-auto mb-10 leading-relaxed">
+            Training that delivers real, and lasting change.
+            No shortcuts — just a proven system built around you.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#contact"
+              className="bg-primary hover:bg-primary-dark text-white font-black text-lg px-10 py-4 rounded-full transition-all hover:scale-105 active:scale-95"
+            >
+              Join Now
+            </a>
+            <a
+              href="#transformations"
+              className="border-2 border-white/50 hover:border-white text-white font-semibold text-lg px-10 py-4 rounded-full transition-all"
+            >
+              See Results
+            </a>
+          </div>
+
+          {/* Stats */}
+          <div className="flex justify-center gap-12 mt-16 border-t border-white/15 pt-10">
+            {[
+              { n: "200+", label: "Clients Transformed" },
+              { n: "95%", label: "Success Rate" },
+              { n: "5+", label: "Years Experience" },
+            ].map((s) => (
+              <div key={s.label} className="text-center">
+                <p className="text-3xl font-black text-primary">{s.n}</p>
+                <p className="text-white/50 text-xs mt-1 uppercase tracking-wider">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-40">
+          <span className="text-white text-xs tracking-widest uppercase">Scroll</span>
+          <div className="w-px h-8 bg-white animate-pulse" />
+        </div>
+      </section>
+
+      {/* ── ABOUT / WHO I AM ── */}
+      <section id="about" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row items-center gap-14">
+            {/* Photo */}
+            <div className="flex-shrink-0 w-full lg:w-auto">
+              {/*
+                REPLACE this placeholder with your actual photo:
+                <img
+                  src="/coach-photo.jpg"
+                  alt="Coach [Your Name]"
+                  className="w-full lg:w-[420px] h-[500px] object-cover rounded-2xl"
+                />
+              */}
+              <div className="w-full lg:w-[420px] h-[460px] bg-gray-100 rounded-2xl flex flex-col items-center justify-center border-2 border-dashed border-gray-200">
+                <span className="text-6xl mb-3">📸</span>
+                <p className="text-gray-400 text-sm text-center px-8">
+                  Add your photo here
+                  <br />
+                  <span className="text-xs text-gray-300">420 × 460 px recommended</span>
+                </p>
+              </div>
+            </div>
+
+            {/* Text */}
+            <div className="flex-1">
+              <p className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-3">
+                Who I Am
+              </p>
+              <h2 className="text-4xl sm:text-5xl font-black text-dark leading-tight mb-6">
+                Your Coach,
+                <br />Your Partner in Change
+              </h2>
+              <p className="text-gray-500 text-lg leading-relaxed mb-4">
+                {/* REPLACE with your own bio */}
+                I&apos;m <strong className="text-dark">[Your Name]</strong>, a certified personal
+                trainer and nutrition coach with over 5 years of experience helping
+                people transform their bodies and reclaim their confidence.
+              </p>
+              <p className="text-gray-500 text-lg leading-relaxed mb-8">
+                My method combines science-backed training, sustainable nutrition,
+                and the mindset coaching that makes it all stick — so you don&apos;t
+                just reach your goal, you stay there for life.
+              </p>
+
+              {/* Credential badges */}
+              <div className="flex flex-wrap gap-3">
+                {[
+                  "Certified Personal Trainer",
+                  "Nutrition Coach",
+                  "Online Coaching",
+                  "Body Transformation",
+                ].map((b) => (
+                  <span
+                    key={b}
+                    className="bg-purple-50 text-primary text-sm font-semibold px-4 py-1.5 rounded-full border border-purple-100"
+                  >
+                    {b}
+                  </span>
+                ))}
+              </div>
+
               <a
                 href="#contact"
-                className="bg-accent text-black font-black text-lg px-8 py-4 rounded-full hover:bg-yellow-300 transition-all hover:scale-105 active:scale-95 text-center"
+                className="inline-block mt-8 bg-primary hover:bg-primary-dark text-white font-bold px-8 py-3.5 rounded-full transition-colors"
               >
-                JOIN NOW
+                Start Your Transformation
               </a>
-              <a
-                href="#transformations"
-                className="border border-white/30 text-white font-semibold text-lg px-8 py-4 rounded-full hover:border-white/70 transition-all text-center"
-              >
-                See Results
-              </a>
-            </div>
-
-            {/* Stats row */}
-            <div className="flex gap-8 mt-12 justify-center lg:justify-start">
-              {[
-                { number: "200+", label: "Clients coached" },
-                { number: "95%", label: "Success rate" },
-                { number: "5+", label: "Years experience" },
-              ].map((s) => (
-                <div key={s.label}>
-                  <p className="text-2xl font-black text-accent">{s.number}</p>
-                  <p className="text-xs text-white/50 mt-0.5">{s.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right — coach photo */}
-          <div className="flex-shrink-0 relative">
-            {/* Accent ring */}
-            <div className="absolute -inset-3 rounded-3xl border border-accent/30" />
-            <div className="absolute -inset-6 rounded-3xl border border-accent/10" />
-
-            {/*
-              REPLACE THIS DIV with your actual photo:
-              <Image
-                src="/your-photo.jpg"
-                alt="Coach [Your Name]"
-                width={400}
-                height={520}
-                className="rounded-2xl object-cover w-[320px] sm:w-[360px] lg:w-[400px] h-[420px] sm:h-[480px] lg:h-[520px]"
-                priority
-              />
-            */}
-            <div className="relative rounded-2xl overflow-hidden w-[320px] sm:w-[360px] lg:w-[400px] h-[420px] sm:h-[480px] lg:h-[520px] bg-zinc-900 flex flex-col items-center justify-center border border-white/10">
-              <span className="text-6xl mb-4">📸</span>
-              <p className="text-white/40 text-sm text-center px-8">
-                Replace with your photo
-                <br />
-                <span className="text-xs text-white/25">400 × 520 px recommended</span>
-              </p>
             </div>
           </div>
         </div>
-
-        {/* Bio strip below photo+text */}
-        <div className="mt-16 border-t border-white/10 pt-10">
-          <div className="max-w-2xl lg:mx-0 mx-auto">
-            <p className="section-label mb-3">Who I am</p>
-            {/*
-              REPLACE the text below with your own bio.
-            */}
-            <p className="text-white/70 text-lg leading-relaxed">
-              I&apos;m{" "}
-              <span className="text-white font-semibold">[Your Name]</span>, a
-              certified personal trainer and nutrition coach with over 5 years
-              of experience transforming bodies and building confidence. My
-              approach combines evidence-based training, sustainable nutrition,
-              and the mindset work that makes it all stick — so you don&apos;t
-              just reach your goal, you stay there.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
