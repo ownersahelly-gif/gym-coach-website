@@ -4,12 +4,12 @@ const cards = [
   {
     title: "1-on-1 Training",
     href: "/services/1-on-1-training",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=650&fit=crop&q=80",
+    image: "/service-training.jpg",
   },
   {
     title: "Nutrition Planning",
     href: "/services/nutrition-planning",
-    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&h=650&fit=crop&q=80",
+    image: "/service-nutrition.jpg",
   },
 ];
 

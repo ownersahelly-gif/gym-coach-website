@@ -50,7 +50,7 @@ export const serviceDetails: ServiceDetail[] = [
     slug: "1-on-1-training",
     title: "1-on-1 Training",
     tagline: "Personalised coaching built entirely around you",
-    image: "/hero-photo.jpg",
+    image: "/service-training.jpg",
     about:
       "A fully personalised training program designed around your goals, schedule and experience level — with weekly check-ins to keep you progressing and accountable.",
     plans: [
@@ -63,7 +63,7 @@ export const serviceDetails: ServiceDetail[] = [
     slug: "nutrition-planning",
     title: "Nutrition Planning",
     tagline: "Science-backed nutrition that fits your life",
-    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900&h=700&fit=crop&q=80",
+    image: "/service-nutrition.jpg",
     about:
       "A custom nutrition plan tailored to your body, goals and preferences. No starvation, no guesswork — just sustainable food strategies that get results.",
     plans: [
