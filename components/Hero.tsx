@@ -10,32 +10,32 @@ export default function Hero() {
 
         {/* Text block — same dark bg as navbar so it blends in */}
         <div
-          className="pt-24 pb-10 px-6 text-center"
-          style={{ background: "#1a0a2e" }}
+          className="pt-24 pb-6 px-6 text-center"
+          style={{ background: "#000000" }}
         >
-          <p className="text-white/60 font-bold uppercase tracking-[0.18em] text-xs">
+          <p className="text-white/50 font-bold uppercase tracking-[0.18em] text-[10px]">
             Elite Fitness &amp; Nutrition Coaching By
           </p>
           <h1
-            className="font-black italic text-primary-light leading-tight mt-2"
-            style={{ fontSize: "clamp(3rem, 14vw, 5.5rem)" }}
+            className="font-black italic text-primary-light leading-tight mt-1"
+            style={{ fontSize: "clamp(2rem, 9vw, 3.5rem)" }}
           >
             OLA VOLOSHINA
           </h1>
-          <p className="text-white/50 text-sm mt-4 max-w-xs mx-auto leading-relaxed">
+          <p className="text-white/40 text-xs mt-3 max-w-xs mx-auto leading-relaxed">
             Level up your body and mindset with training that delivers real, and lasting change.
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center gap-3 bg-white text-primary font-black text-sm uppercase mt-7 hover:bg-gray-100 transition-colors"
-            style={{ letterSpacing: "0.15em", padding: "1rem 3rem", display: "block", maxWidth: "280px", margin: "1.75rem auto 0" }}
+            className="inline-flex items-center justify-center gap-2 bg-white text-primary font-black text-xs uppercase hover:bg-gray-100 transition-colors mt-5"
+            style={{ letterSpacing: "0.15em", padding: "0.85rem 2.5rem", display: "block", maxWidth: "260px", margin: "1.25rem auto 0" }}
           >
             → JOIN NOW
           </a>
         </div>
 
         {/* Photo — full width, sits flush below text, no gap */}
-        <div style={{ background: "#1a0a2e" }}>
+        <div style={{ background: "#000000" }}>
           <img
             src="/hero-photo.jpg"
             alt="Ola Voloshina"
