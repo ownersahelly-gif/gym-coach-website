@@ -9,7 +9,7 @@ const onBlur = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLT
 export default function ContactSection() {
   return (
     <section id="contact" className="py-14" style={{ background: "#0a0a0a", borderTop: "1px solid #1c1c1c" }}>
-      <div className="max-w-md mx-auto px-6 text-center">
+      <div className="max-w-md lg:max-w-lg mx-auto px-6 text-center">
         <Reveal>
           <p className="text-white/40 text-[11px] font-bold uppercase tracking-[0.25em] mb-2">Get started</p>
           <h2 className="display text-white text-3xl sm:text-4xl">Ready to start?</h2>

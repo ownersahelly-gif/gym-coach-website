@@ -14,11 +14,11 @@ const items = [
 export default function Posts({ posts }: { posts: Post[] }) {
   return (
     <section id="posts" className="py-12" style={{ background: "#000000" }}>
-      <div className="max-w-md mx-auto px-6">
+      <div className="max-w-md mx-auto px-6 lg:max-w-6xl">
         <h2 className="display text-white text-3xl sm:text-4xl text-center">Our Posts</h2>
         <div className="heading-rule mb-8" />
 
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-3 lg:gap-6">
           {items.map((post, i) => (
             <Reveal key={post.label} delay={i * 100}>
               <a href={post.url} target="_blank" rel="noopener noreferrer" className="lift group block rounded-lg overflow-hidden">

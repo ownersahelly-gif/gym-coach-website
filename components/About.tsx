@@ -39,8 +39,8 @@ export default function About() {
           {/* Two photos */}
           <Reveal delay={140} className="flex-shrink-0 w-full lg:w-[42%]">
             <div className="grid grid-cols-2 gap-2.5">
-              <img src="/about1.jpg" alt="" className="w-full h-52 object-cover rounded-lg" />
-              <img src="/about2.jpg" alt="" className="w-full h-52 object-cover rounded-lg" />
+              <img src="/about1.jpg" alt="" className="w-full h-52 lg:h-80 object-cover rounded-lg" />
+              <img src="/about2.jpg" alt="" className="w-full h-52 lg:h-80 object-cover rounded-lg" />
             </div>
           </Reveal>
         </div>

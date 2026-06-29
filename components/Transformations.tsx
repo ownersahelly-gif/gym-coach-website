@@ -15,15 +15,15 @@ export default function Transformations({ transformations }: { transformations: 
         <div className="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, #000, transparent)" }} />
         <div className="strip-track">
           {items.map((t, i) => (
-            <div key={i} className="flex flex-shrink-0" style={{ width: "100vw" }}>
+            <div key={i} className="flex flex-shrink-0 w-screen lg:w-[56vw]">
               {/* Before — left half */}
               <div className="relative w-1/2">
-                <img src={t.before_image} alt={`${t.name} before`} className="w-full h-72 sm:h-96 object-cover" />
+                <img src={t.before_image} alt={`${t.name} before`} className="w-full h-72 sm:h-96 lg:h-[32rem] object-cover" />
                 <span className="absolute top-3 left-3 bg-black/60 text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full">Before</span>
               </div>
               {/* After — right half */}
               <div className="relative w-1/2">
-                <img src={t.after_image} alt={`${t.name} after`} className="w-full h-72 sm:h-96 object-cover" />
+                <img src={t.after_image} alt={`${t.name} after`} className="w-full h-72 sm:h-96 lg:h-[32rem] object-cover" />
                 <span className="absolute top-3 right-3 bg-white text-black text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full">After</span>
                 <span className="absolute bottom-3 right-3 bg-black/60 text-white text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full">{t.result}</span>
               </div>

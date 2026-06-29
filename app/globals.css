@@ -59,6 +59,14 @@ input, select, textarea { font-size: 16px !important; }
   width: 44px; height: 2px; background: #fff; margin: 14px auto 0; border-radius: 2px;
 }
 
+/* Hero sizing — mobile values unchanged; only scales up on laptops */
+.hero-name { font-size: clamp(1.9rem, 8vw, 3rem); }
+.hero-img { height: 68vh; display: block; }
+@media (min-width: 1024px) {
+  .hero-name { font-size: clamp(3rem, 4.6vw, 5rem); }
+  .hero-img { height: 88vh; }
+}
+
 /* Full-width before/after sliding strip */
 @keyframes slideStrip {
   0% { transform: translateX(0); }
