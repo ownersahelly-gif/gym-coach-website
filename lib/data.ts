@@ -1,33 +1,56 @@
-import type { Service, Transformation, Post } from "./types";
+import type { Service, Transformation, Post, Testimonial } from "./types";
 
 export const services: Service[] = [
   {
     id: "1",
     title: "1-on-1 Online Coaching",
     description:
-      "Personalised training and nutrition plan built around your schedule, goals, and lifestyle. Weekly check-ins included.",
+      "A fully personalised training and nutrition plan built around your schedule, goals and lifestyle — with weekly check-ins.",
     icon: "🏋️",
   },
   {
     id: "2",
-    title: "Custom Meal Plans",
+    title: "Custom Nutrition Plans",
     description:
-      "Science-backed nutrition tailored to your body type and goals — no starvation, no guesswork.",
+      "Science-backed nutrition tailored to your body and goals. No starvation, no guesswork — just food that works.",
     icon: "🥗",
   },
   {
     id: "3",
-    title: "Transformation Program",
+    title: "12-Week Transformation",
     description:
-      "12-week structured program that takes you from where you are to where you want to be — guaranteed progress.",
+      "A structured program that takes you from where you are to where you want to be, with guaranteed progress.",
     icon: "🔥",
   },
   {
     id: "4",
     title: "Group Challenges",
     description:
-      "Monthly fitness challenges with a community of motivated people pushing each other to level up.",
+      "Monthly challenges with a community of motivated people pushing each other to level up — together.",
     icon: "🏆",
+  },
+];
+
+export const process = [
+  {
+    step: "01",
+    title: "Apply & Assess",
+    desc: "We start with a deep-dive consult to understand your goals, history, and lifestyle.",
+  },
+  {
+    step: "02",
+    title: "Build Your Plan",
+    desc: "I design a training and nutrition system made specifically for your body and routine.",
+  },
+  {
+    step: "03",
+    title: "Train & Adjust",
+    desc: "You train, I track. Weekly check-ins keep us adapting so progress never stalls.",
+  },
+  {
+    step: "04",
+    title: "Transform",
+    desc: "Habits become second nature, results become permanent — and you keep them for life.",
   },
 ];
 
@@ -35,34 +58,61 @@ export const transformations: Transformation[] = [
   {
     id: "1",
     name: "Ahmed K.",
-    before_image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop&q=80",
-    after_image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=500&fit=crop&q=80",
+    before_image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=520&fit=crop&q=80",
+    after_image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=520&fit=crop&q=80",
     duration: "12 weeks",
     result: "Lost 18 kg",
   },
   {
     id: "2",
     name: "Sara M.",
-    before_image: "https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=400&h=500&fit=crop&q=80",
-    after_image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=500&fit=crop&q=80",
+    before_image: "https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=400&h=520&fit=crop&q=80",
+    after_image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=520&fit=crop&q=80",
     duration: "16 weeks",
     result: "Lost 12 kg",
   },
   {
     id: "3",
     name: "Omar T.",
-    before_image: "https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?w=400&h=500&fit=crop&q=80",
-    after_image: "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=400&h=500&fit=crop&q=80",
+    before_image: "https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?w=400&h=520&fit=crop&q=80",
+    after_image: "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=400&h=520&fit=crop&q=80",
     duration: "8 weeks",
-    result: "Gained 6 kg muscle",
+    result: "+6 kg muscle",
   },
   {
     id: "4",
     name: "Lina R.",
-    before_image: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=400&h=500&fit=crop&q=80",
-    after_image: "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=400&h=500&fit=crop&q=80",
+    before_image: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=400&h=520&fit=crop&q=80",
+    after_image: "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=400&h=520&fit=crop&q=80",
     duration: "20 weeks",
     result: "Lost 22 kg",
+  },
+];
+
+export const testimonials: Testimonial[] = [
+  {
+    id: "1",
+    name: "Sara M.",
+    role: "Lost 12 kg in 16 weeks",
+    quote:
+      "Ola completely changed how I see fitness. For the first time the plan actually fit my life — and the results speak for themselves.",
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&h=120&fit=crop&q=80",
+  },
+  {
+    id: "2",
+    name: "Ahmed K.",
+    role: "Lost 18 kg in 12 weeks",
+    quote:
+      "I'd tried everything before. The difference here was the accountability — Ola never let me settle. Best decision I've made.",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&q=80",
+  },
+  {
+    id: "3",
+    name: "Lina R.",
+    role: "Lost 22 kg in 20 weeks",
+    quote:
+      "Not just a coach — a partner. I gained strength, confidence and habits I'll keep forever. I can't recommend her enough.",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&q=80",
   },
 ];
 
@@ -70,37 +120,37 @@ export const posts: Post[] = [
   {
     id: "1",
     title: "5 mistakes killing your progress at the gym",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=700&h=460&fit=crop&q=80",
     instagram_url: "https://www.instagram.com/p/REPLACE_WITH_POST_ID/",
   },
   {
     id: "2",
     title: "What I eat in a day as a coach",
-    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=700&h=460&fit=crop&q=80",
     instagram_url: "https://www.instagram.com/p/REPLACE_WITH_POST_ID/",
   },
   {
     id: "3",
     title: "The truth about cardio and fat loss",
-    image: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=700&h=460&fit=crop&q=80",
     instagram_url: "https://www.instagram.com/p/REPLACE_WITH_POST_ID/",
   },
   {
     id: "4",
     title: "How to stay consistent when motivation fades",
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=700&h=460&fit=crop&q=80",
     instagram_url: "https://www.instagram.com/p/REPLACE_WITH_POST_ID/",
   },
   {
     id: "5",
     title: "3-day full body workout for beginners",
-    image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=700&h=460&fit=crop&q=80",
     instagram_url: "https://www.instagram.com/p/REPLACE_WITH_POST_ID/",
   },
   {
     id: "6",
     title: "Sleep is your #1 recovery tool",
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=700&h=460&fit=crop&q=80",
     instagram_url: "https://www.instagram.com/p/REPLACE_WITH_POST_ID/",
   },
 ];

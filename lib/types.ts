@@ -20,3 +20,11 @@ export type Post = {
   image: string;
   instagram_url: string;
 };
+
+export type Testimonial = {
+  id: string;
+  name: string;
+  role: string;
+  quote: string;
+  avatar: string;
+};
