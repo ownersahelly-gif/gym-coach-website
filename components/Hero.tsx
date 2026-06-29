@@ -28,12 +28,14 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Photo — full-bleed, no text on it */}
+      {/* Photo — full-bleed, no text on it.
+          Fixed height (not max-height) so the box is reserved before the
+          image loads — prevents the layout from jumping. */}
       <img
         src="/hero-photo.jpg"
         alt="Ola Voloshina"
-        className="fade-up w-full object-cover object-top"
-        style={{ display: "block", maxHeight: "68vh", animationDelay: "0.2s" }}
+        className="fade-up w-full object-cover object-top bg-black"
+        style={{ display: "block", height: "68vh", animationDelay: "0.2s" }}
       />
     </section>
   );
