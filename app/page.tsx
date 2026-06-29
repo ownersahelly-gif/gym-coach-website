@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import SmoothScroll from "@/components/SmoothScroll";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
@@ -13,7 +12,6 @@ import { transformations, posts } from "@/lib/data";
 export default function Home() {
   return (
     <main>
-      <SmoothScroll />
       <Navbar />
       <Hero />
       <About />

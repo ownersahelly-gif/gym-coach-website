@@ -28,7 +28,7 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href="#contact" className="bg-white text-black font-bold text-xs px-4 py-2 rounded-full hover:opacity-85 transition-opacity uppercase tracking-wider">
+          <a href="/services" className="bg-white text-black font-bold text-xs px-4 py-2 rounded-full hover:opacity-85 transition-opacity uppercase tracking-wider">
             Join Now
           </a>
         </div>
@@ -47,7 +47,7 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href="#contact" className="bg-white text-black font-bold px-5 py-2.5 rounded-full text-center uppercase tracking-wider text-sm" onClick={() => setMenuOpen(false)}>
+          <a href="/services" className="bg-white text-black font-bold px-5 py-2.5 rounded-full text-center uppercase tracking-wider text-sm" onClick={() => setMenuOpen(false)}>
             Join Now
           </a>
         </div>

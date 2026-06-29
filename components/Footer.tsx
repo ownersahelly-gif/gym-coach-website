@@ -14,18 +14,18 @@ export default function Footer() {
           <div>
             <h4 className="text-white display text-sm tracking-widest mb-4">Links</h4>
             <ul className="space-y-2 text-sm text-white/40">
-              <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
-              <li><a href="#transformations" className="hover:text-white transition-colors">Results</a></li>
-              <li><a href="#posts" className="hover:text-white transition-colors">Posts</a></li>
+              <li><a href="/#about" className="hover:text-white transition-colors">About</a></li>
+              <li><a href="/services" className="hover:text-white transition-colors">Services</a></li>
+              <li><a href="/#transformations" className="hover:text-white transition-colors">Results</a></li>
+              <li><a href="/#posts" className="hover:text-white transition-colors">Posts</a></li>
             </ul>
           </div>
           <div>
             <h4 className="text-white display text-sm tracking-widest mb-4">Resources</h4>
             <ul className="space-y-2 text-sm text-white/40">
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Terms &amp; Conditions</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Refund Policy</a></li>
+              <li><a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms" className="hover:text-white transition-colors">Terms &amp; Conditions</a></li>
+              <li><a href="/refund-policy" className="hover:text-white transition-colors">Refund Policy</a></li>
             </ul>
           </div>
         </div>

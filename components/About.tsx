@@ -30,7 +30,7 @@ export default function About() {
                   </li>
                 ))}
               </ul>
-              <a href="#contact" className="inline-block bg-white text-black display text-xs px-7 py-3 hover:bg-white/85 transition-colors" style={{ letterSpacing: "0.1em" }}>
+              <a href="/services" className="inline-block bg-white text-black display text-xs px-7 py-3 hover:bg-white/85 transition-colors" style={{ letterSpacing: "0.1em" }}>
                 Work with me
               </a>
             </Reveal>

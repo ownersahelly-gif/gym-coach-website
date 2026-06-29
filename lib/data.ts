@@ -31,6 +31,70 @@ export const services: Service[] = [
   },
 ];
 
+export type ServicePlan = { name: string; price: string; perks: string[] };
+export type ServiceDetail = {
+  slug: string;
+  title: string;
+  tagline: string;
+  image: string;
+  about: string;
+  plans: ServicePlan[];
+};
+
+/*
+  EDIT ME: prices, perks, and the payment number live here and on the
+  signup form (components/ServiceSignupForm.tsx).
+*/
+export const serviceDetails: ServiceDetail[] = [
+  {
+    slug: "1-on-1-training",
+    title: "1-on-1 Training",
+    tagline: "Personalised coaching built entirely around you",
+    image: "/hero-photo.jpg",
+    about:
+      "A fully personalised training program designed around your goals, schedule and experience level — with weekly check-ins to keep you progressing and accountable.",
+    plans: [
+      { name: "1 Month", price: "EGP 2,000", perks: ["Custom training plan", "Weekly check-ins", "Form reviews"] },
+      { name: "3 Months", price: "EGP 5,400", perks: ["Everything in 1 month", "Nutrition guidance", "Priority support"] },
+      { name: "6 Months", price: "EGP 9,600", perks: ["Everything in 3 months", "Full transformation plan", "24/7 chat access"] },
+    ],
+  },
+  {
+    slug: "nutrition-planning",
+    title: "Nutrition Planning",
+    tagline: "Science-backed nutrition that fits your life",
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900&h=700&fit=crop&q=80",
+    about:
+      "A custom nutrition plan tailored to your body, goals and preferences. No starvation, no guesswork — just sustainable food strategies that get results.",
+    plans: [
+      { name: "1 Month", price: "EGP 1,500", perks: ["Custom meal plan", "Macro targets", "Weekly adjustments"] },
+      { name: "3 Months", price: "EGP 4,000", perks: ["Everything in 1 month", "Recipe guide", "Supplement advice"] },
+    ],
+  },
+  {
+    slug: "transformation",
+    title: "12-Week Transformation",
+    tagline: "The complete body & mindset overhaul",
+    image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=900&h=700&fit=crop&q=80",
+    about:
+      "A structured 12-week program combining training, nutrition and mindset coaching to take you from where you are to where you want to be — with guaranteed progress.",
+    plans: [
+      { name: "12 Weeks", price: "EGP 7,000", perks: ["Training + nutrition", "Weekly 1-on-1 calls", "Guaranteed progress"] },
+    ],
+  },
+  {
+    slug: "group-challenges",
+    title: "Group Challenges",
+    tagline: "Train alongside a motivated community",
+    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=900&h=700&fit=crop&q=80",
+    about:
+      "Monthly fitness challenges with a community of motivated people pushing each other to level up — structured workouts, leaderboards and accountability.",
+    plans: [
+      { name: "Monthly", price: "EGP 800", perks: ["Group workouts", "Community chat", "Monthly leaderboard"] },
+    ],
+  },
+];
+
 export const process = [
   {
     step: "01",

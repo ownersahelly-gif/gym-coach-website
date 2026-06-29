@@ -13,7 +13,7 @@ export default function Hero() {
           Level up your body and mindset with training that delivers real, lasting change.
         </p>
         <a
-          href="#contact"
+          href="/services"
           className="inline-block bg-white text-black display text-xs px-9 py-3 mt-4 hover:bg-white/85 transition-colors"
           style={{ letterSpacing: "0.12em" }}
         >
