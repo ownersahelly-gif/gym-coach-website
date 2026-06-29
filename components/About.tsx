@@ -36,11 +36,13 @@ export default function About() {
             </Reveal>
           </div>
 
-          {/* Two images */}
+          {/* Four photos */}
           <Reveal delay={140} className="flex-shrink-0 w-full lg:w-[42%]">
             <div className="grid grid-cols-2 gap-2.5">
-              <img src="https://images.unsplash.com/photo-1549476464-37392f717541?w=300&h=380&fit=crop&q=80" alt="" className="w-full h-44 object-cover rounded-lg" />
-              <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=300&h=380&fit=crop&q=80" alt="" className="w-full h-44 object-cover rounded-lg" />
+              <img src="/about1.jpg" alt="" className="w-full h-44 object-cover rounded-lg" />
+              <img src="/about2.jpg" alt="" className="w-full h-44 object-cover rounded-lg" />
+              <img src="/about3.jpg" alt="" className="w-full h-44 object-cover rounded-lg" />
+              <img src="/about4.jpg" alt="" className="w-full h-44 object-cover rounded-lg" />
             </div>
           </Reveal>
         </div>
