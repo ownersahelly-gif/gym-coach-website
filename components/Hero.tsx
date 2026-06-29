@@ -2,82 +2,90 @@ export default function Hero() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative min-h-screen flex flex-col overflow-hidden">
-        <img
-          src="/hero-photo.jpg"
-          alt="Coach"
-          className="absolute inset-0 w-full h-full object-cover object-top"
-        />
-        {/* Dark purple gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d0d]/70 via-[#1a0a2e]/60 to-[#0d0d0d]/80" />
+      <section className="flex flex-col bg-[#0d0d0d]">
 
-        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center pt-24 pb-16">
-          <p className="text-purple-300/80 font-bold uppercase tracking-[0.2em] text-xs sm:text-sm">
+        {/* Text block — pure black, NO photo behind it */}
+        <div className="pt-28 pb-8 px-6 text-center">
+          <p className="text-white/70 font-bold uppercase tracking-[0.15em] text-xs sm:text-sm">
             Elite Fitness &amp; Nutrition Coaching By
           </p>
-          <h1 className="text-5xl sm:text-7xl font-black italic text-primary-light mt-2 leading-tight drop-shadow-lg">
+          <h1 className="text-5xl sm:text-6xl font-black italic text-primary-light mt-2 leading-tight">
             OLA VOLOSHINA
           </h1>
-          <p className="text-white/60 text-base sm:text-lg mt-5 max-w-sm mx-auto leading-relaxed">
+          <p className="text-white/50 text-sm sm:text-base mt-4 max-w-xs mx-auto leading-relaxed">
             Level up your body and mindset with training that delivers real, and lasting change.
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-3 bg-white text-primary font-black text-sm uppercase px-12 py-4 mt-8 hover:bg-purple-50 transition-colors"
+            className="inline-flex items-center gap-3 bg-white text-primary font-black text-sm uppercase px-10 py-4 mt-7 hover:bg-gray-100 transition-colors"
             style={{ letterSpacing: "0.15em" }}
           >
-            <span>→</span> Join Now
+            → JOIN NOW
           </a>
+        </div>
+
+        {/* Photo — sits below text, NO overlay, NO text on it */}
+        <div className="w-full">
+          <img
+            src="/hero-photo.jpg"
+            alt="Ola Voloshina"
+            className="w-full object-cover object-top"
+            style={{ maxHeight: "75vh" }}
+          />
         </div>
       </section>
 
       {/* ── ABOUT ── */}
-      <section id="about" className="py-20 bg-surface">
+      <section id="about" className="py-16 bg-[#0d0d0d]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-14">
-            {/* Photo placeholder */}
-            <div className="flex-shrink-0 w-full lg:w-auto">
-              {/*
-                REPLACE with your photo:
-                <img src="/coach-photo.jpg" alt="Coach" className="w-full lg:w-[420px] h-[500px] object-cover rounded-2xl" />
-              */}
-              <div className="w-full lg:w-[420px] h-[460px] bg-surface-2 rounded-2xl flex flex-col items-center justify-center border border-border">
-                <span className="text-6xl mb-3 opacity-30">📸</span>
-                <p className="text-white/20 text-sm text-center px-8">Add your photo here</p>
-              </div>
+          <div className="flex flex-col lg:flex-row items-start gap-10">
+
+            {/* Left — text */}
+            <div className="flex-1">
+              <p className="text-white/80 text-base leading-relaxed mb-5">
+                Meet <strong className="text-white">Ola Voloshina</strong>, a certified fitness coach and
+                sports nutrition expert who has helped hundreds of athletes and everyday
+                individuals transform their health and performance. With years of experience in
+                training, functional movement, and nutrition, Ola offers a results-driven approach
+                tailored to your body and your goals.
+              </p>
+              <ul className="space-y-2 mb-8">
+                {[
+                  "Customised nutrition & fitness coaching",
+                  "Proven results with real transformations",
+                  "Guidance, accountability & expert support",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-white/60 text-sm">
+                    <span className="text-primary-light mt-0.5">✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="#contact"
+                className="inline-block bg-primary hover:bg-primary-dark text-white font-bold px-7 py-3 rounded-md transition-colors text-sm"
+              >
+                About Ola
+              </a>
             </div>
 
-            {/* Text */}
-            <div className="flex-1">
-              <p className="text-primary-light font-bold tracking-[0.2em] uppercase text-xs mb-3">
-                Who I Am
-              </p>
-              <h2 className="text-4xl sm:text-5xl font-black text-white leading-tight mb-6">
-                Your Coach,
-                <br /><span className="text-primary-light">Your Partner</span> in Change
-              </h2>
-              <p className="text-white/50 text-lg leading-relaxed mb-4">
-                I&apos;m <strong className="text-white">Ola Voloshina</strong>, a certified personal
-                trainer and nutrition coach with over 5 years of experience helping
-                people transform their bodies and reclaim their confidence.
-              </p>
-              <p className="text-white/50 text-lg leading-relaxed mb-8">
-                My method combines science-backed training, sustainable nutrition,
-                and the mindset coaching that makes it all stick — so you don&apos;t
-                just reach your goal, you stay there for life.
-              </p>
-
-              <div className="flex flex-wrap gap-3">
-                {["Certified Personal Trainer", "Nutrition Coach", "Online Coaching", "Body Transformation"].map((b) => (
-                  <span key={b} className="bg-primary/10 text-primary-light text-sm font-semibold px-4 py-1.5 rounded-full border border-primary/30">
-                    {b}
-                  </span>
-                ))}
-              </div>
-
-              <a href="#contact" className="inline-block mt-8 bg-primary hover:bg-primary-dark text-white font-bold px-8 py-3.5 rounded-full transition-colors">
-                Start Your Transformation
-              </a>
+            {/* Right — photo grid */}
+            <div className="flex-shrink-0 w-full lg:w-[45%] grid grid-cols-2 gap-2">
+              <img
+                src="https://images.unsplash.com/photo-1549476464-37392f717541?w=300&h=400&fit=crop&q=80"
+                alt="Training"
+                className="w-full h-48 object-cover rounded-lg col-span-1"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=300&h=400&fit=crop&q=80"
+                alt="Coaching"
+                className="w-full h-48 object-cover rounded-lg col-span-1"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=600&h=250&fit=crop&q=80"
+                alt="Results"
+                className="w-full h-36 object-cover rounded-lg col-span-2"
+              />
             </div>
           </div>
         </div>
