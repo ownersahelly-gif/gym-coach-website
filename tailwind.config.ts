@@ -9,13 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#9B3FDE",
-        "primary-dark": "#7B2FBE",
-        "primary-light": "#C47AFF",
-        surface: "#141414",
-        "surface-2": "#1c1c1c",
-        "surface-3": "#242424",
-        border: "#2a2a2a",
+        accent: "#00C9A7",
+        "accent-dark": "#00A388",
+        "accent-light": "#4DFFDB",
+        s1: "#0a0a0a",
+        s2: "#0f1923",
+        s3: "#111827",
+        s4: "#0c1a14",
+        border: "#1e2a2a",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],

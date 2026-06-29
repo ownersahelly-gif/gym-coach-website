@@ -6,10 +6,10 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: #0d0d0d;
+  background: #0a0a0a;
   color: #f0f0f0;
   font-family: var(--font-inter), sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-::selection { background: #8B2FC9; color: #fff; }
+::selection { background: #00C9A7; color: #000; }

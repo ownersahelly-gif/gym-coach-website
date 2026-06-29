@@ -1,46 +1,40 @@
 import type { Post } from "@/lib/types";
 
+const categories = ["Summer Workout", "Hybrid Athlete", "Challenges", "Nutrition", "Strength", "Recovery"];
+
 export default function Posts({ posts }: { posts: Post[] }) {
   return (
-    <section id="posts" className="py-16 bg-[#0d0d0d]">
+    /* Section 5: Dark navy */
+    <section id="posts" className="py-16" style={{ background: "#0f1923" }}>
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header like reference */}
-        <p className="text-white/40 text-xs uppercase tracking-[0.3em] text-center mb-1">Our Posts</p>
+        <p className="text-white/30 text-[10px] uppercase tracking-[0.3em] text-center mb-1">Our Posts</p>
         <h2 className="text-3xl sm:text-4xl font-black text-white text-center mb-10 uppercase tracking-wide">
           Latest Articles
         </h2>
 
-        {/* Stacked full-width cards like reference */}
-        <div className="flex flex-col gap-0">
+        <div className="flex flex-col">
           {posts.map((post, i) => (
             <a
               key={post.id}
               href={post.instagram_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block border-b border-border last:border-b-0"
+              className="group block border-b"
+              style={{ borderColor: "#1e2a2a" }}
             >
-              {/* Full width image */}
               <div className="relative w-full overflow-hidden">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                {/* Instagram icon */}
+                <img src={post.image} alt={post.title} className="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute top-3 right-3 w-8 h-8 bg-black/60 backdrop-blur-sm rounded-full flex items-center justify-center">
                   <svg viewBox="0 0 24 24" className="w-4 h-4 fill-white">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                   </svg>
                 </div>
               </div>
-
-              {/* Title below image like reference */}
               <div className="py-4 px-1">
-                <span className="text-primary-light text-xs font-bold uppercase tracking-wider">
-                  {["Summer Workout", "Hybrid Athlete", "Challenges", "Nutrition", "Strength", "Recovery"][i] ?? "Fitness"}
+                <span className="text-xs font-bold uppercase tracking-wider" style={{ color: "#00C9A7" }}>
+                  {categories[i] ?? "Fitness"}
                 </span>
-                <h3 className="text-white font-black text-base mt-1 group-hover:text-primary-light transition-colors">
+                <h3 className="text-white font-black text-base mt-1 group-hover:opacity-70 transition-opacity">
                   {post.title}
                 </h3>
               </div>
