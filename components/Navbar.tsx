@@ -14,7 +14,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1a0a2e]/95 backdrop-blur-md border-b border-purple-900/30">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-purple-900/20" style={{ background: "#1a0a2e" }}>
       <div className="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3">
@@ -47,7 +47,7 @@ export default function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="bg-[#12071e] border-t border-purple-900/30 px-6 pb-6 flex flex-col gap-4 pt-4">
+        <div className="border-t border-purple-900/20 px-6 pb-6 flex flex-col gap-4 pt-4" style={{ background: "#1a0a2e" }}>
           {links.map((l) => (
             <a
               key={l.href}
