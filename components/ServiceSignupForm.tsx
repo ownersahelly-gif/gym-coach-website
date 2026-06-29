@@ -48,7 +48,7 @@ export default function ServiceSignupForm({ plans }: { plans: ServicePlan[] }) {
 
       {/* Payment instructions */}
       <div className="rounded-xl p-5 mb-6 border" style={{ background: "#0a0a0a", borderColor: "#1c1c1c" }}>
-        <p className="text-white font-bold text-sm mb-1">How to enrol</p>
+        <p className="text-white font-bold text-sm mb-1">How to enroll</p>
         <p className="text-white/50 text-sm leading-relaxed">
           Transfer the amount for your chosen plan to <span className="text-white font-bold">{PAYMENT_NUMBER}</span> (InstaPay / Vodafone Cash),
           then fill in your details below and attach a screenshot of the payment. I&apos;ll confirm your spot within 24 hours.
