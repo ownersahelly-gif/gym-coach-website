@@ -21,7 +21,7 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {serviceDetails.map((s) => (
-              <Link key={s.slug} href={`/services/${s.slug}`} className="group relative block rounded-2xl overflow-hidden border" style={{ borderColor: "#1c1c1c" }}>
+              <Link key={s.slug} href={`/services/${s.slug}`} className="lift group relative block rounded-2xl overflow-hidden border" style={{ borderColor: "#1c1c1c" }}>
                 <img src={s.image} alt={s.title} className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-[600ms]" />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.94), rgba(0,0,0,0.25) 55%, transparent)" }} />
                 <div className="absolute bottom-0 left-0 right-0 p-6">

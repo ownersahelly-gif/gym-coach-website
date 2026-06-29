@@ -15,16 +15,16 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5" style={{ background: "#000000" }}>
       <div className="max-w-6xl mx-auto px-5 h-14 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-full border border-white/25 flex items-center justify-center">
-            <span className="display text-white text-[10px]">OV</span>
+        <a href="#" className="flex items-center gap-2.5">
+          <div className="h-8 w-8 rounded-full bg-white flex items-center justify-center">
+            <span className="display text-black text-[11px] leading-none pt-0.5">OV</span>
           </div>
-          <span className="text-white font-bold text-sm tracking-wide">OLA VOLOSHINA</span>
+          <span className="text-white font-bold text-sm tracking-[0.12em]">OLA VOLOSHINA</span>
         </a>
 
         <div className="hidden md:flex items-center gap-7">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-xs text-white/55 hover:text-white transition-colors uppercase tracking-wider">
+            <a key={l.href} href={l.href} className="navlink text-xs text-white/60 hover:text-white transition-colors uppercase tracking-wider">
               {l.label}
             </a>
           ))}

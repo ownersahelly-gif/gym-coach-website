@@ -12,7 +12,8 @@ export default function ContactSection() {
       <div className="max-w-md mx-auto px-6 text-center">
         <Reveal>
           <p className="text-white/40 text-[11px] font-bold uppercase tracking-[0.25em] mb-2">Get started</p>
-          <h2 className="display text-white text-3xl sm:text-4xl mb-3">Ready to start?</h2>
+          <h2 className="display text-white text-3xl sm:text-4xl">Ready to start?</h2>
+          <div className="heading-rule mb-3" />
           <p className="text-white/45 text-sm mb-7 leading-relaxed">
             Send your details and I&apos;ll get back to you within 24 hours with a plan built around your goals.
           </p>

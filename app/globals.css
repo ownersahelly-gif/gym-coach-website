@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 * { box-sizing: border-box; padding: 0; margin: 0; }
 html { scroll-behavior: smooth; }
 
@@ -10,6 +14,7 @@ body {
   color: #ededed;
   font-family: var(--font-inter), sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
 
@@ -18,9 +23,37 @@ body {
 .display {
   font-family: var(--font-anton), sans-serif;
   font-weight: 400;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.015em;
   line-height: 0.95;
   text-transform: uppercase;
+}
+
+/* Hero entrance — staggered fade up on load */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { opacity: 0; animation: fadeUp 0.9s var(--ease) forwards; }
+
+/* Hover lift for cards */
+.lift { transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease), border-color 0.45s var(--ease); }
+.lift:hover { transform: translateY(-6px); box-shadow: 0 24px 50px -20px rgba(0,0,0,0.8); }
+
+/* Animated underline for nav links */
+.navlink { position: relative; }
+.navlink::after {
+  content: ""; position: absolute; left: 0; bottom: -5px; height: 1px; width: 0;
+  background: #fff; transition: width 0.35s var(--ease);
+}
+.navlink:hover::after { width: 100%; }
+
+/* Button with sliding arrow */
+.btn-arrow .arrow { display: inline-block; transition: transform 0.3s var(--ease); }
+.btn-arrow:hover .arrow { transform: translateX(5px); }
+
+/* Short accent rule under section headings */
+.heading-rule {
+  width: 44px; height: 2px; background: #fff; margin: 14px auto 0; border-radius: 2px;
 }
 
 /* Full-width before/after sliding strip */
@@ -30,6 +63,7 @@ body {
 }
 .strip-track {
   display: flex;
-  animation: slideStrip 28s linear infinite;
+  animation: slideStrip 30s linear infinite;
   width: max-content;
 }
+.strip-track:hover { animation-play-state: paused; }

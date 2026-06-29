@@ -6,10 +6,13 @@ export default function Transformations({ transformations }: { transformations: 
 
   return (
     <section id="transformations" className="py-12" style={{ background: "#000000" }}>
-      <h2 className="display text-white text-3xl sm:text-4xl text-center mb-8">Transformations</h2>
+      <h2 className="display text-white text-3xl sm:text-4xl text-center">Transformations</h2>
+      <div className="heading-rule mb-8" />
 
-      {/* Full-width sliding strip */}
-      <div className="w-full overflow-hidden">
+      {/* Full-width sliding strip with soft edge fades */}
+      <div className="relative w-full overflow-hidden">
+        <div className="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, #000, transparent)" }} />
+        <div className="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, #000, transparent)" }} />
         <div className="strip-track">
           {items.map((t, i) => (
             <div key={i} className="flex flex-shrink-0" style={{ width: "100vw" }}>
