@@ -6,16 +6,15 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: #050505;
+  background: #000000;
   color: #ededed;
   font-family: var(--font-inter), sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
-::selection { background: #00E0B8; color: #000; }
+::selection { background: #ffffff; color: #000; }
 
-/* Display headline helper */
 .display {
   font-family: var(--font-anton), sans-serif;
   font-weight: 400;
@@ -24,28 +23,13 @@ body {
   text-transform: uppercase;
 }
 
-/* Subtle grain / vignette feel via radial accents handled inline per section */
-
-/* Scrolling marquee */
-@keyframes marquee {
+/* Full-width before/after sliding strip */
+@keyframes slideStrip {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-.marquee-track {
-  display: inline-flex;
-  white-space: nowrap;
-  animation: marquee 22s linear infinite;
-}
-
-/* Soft pulse for scroll cue */
-@keyframes cue {
-  0%, 100% { opacity: 0.25; transform: translateY(0); }
-  50% { opacity: 0.8; transform: translateY(6px); }
-}
-.scroll-cue { animation: cue 1.8s ease-in-out infinite; }
-
-/* Thin accent rule */
-.rule {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #00E0B8, transparent);
+.strip-track {
+  display: flex;
+  animation: slideStrip 28s linear infinite;
+  width: max-content;
 }

@@ -9,21 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        accent: "#00E0B8",
-        "accent-dark": "#00B89A",
-        "accent-soft": "#9CFFEC",
-        ink: "#050505",
-        "ink-2": "#0b0b0d",
-        "ink-3": "#101216",
-        "ink-teal": "#08130f",
-        line: "#1c1f24",
+        accent: "#ffffff",
+        ink: "#000000",
+        "ink-2": "#0a0a0a",
+        line: "#1c1c1c",
       },
       fontFamily: {
         display: ["var(--font-anton)", "sans-serif"],
         sans: ["var(--font-inter)", "sans-serif"],
-      },
-      letterSpacing: {
-        mega: "0.3em",
       },
     },
   },
