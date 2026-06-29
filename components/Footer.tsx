@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer id="contact" className="pt-10 pb-6" style={{ background: "#000000", borderTop: "1px solid #1c1c1c" }}>
+    <footer className="pt-10 pb-6" style={{ background: "#000000", borderTop: "1px solid #1c1c1c" }}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
           <div>

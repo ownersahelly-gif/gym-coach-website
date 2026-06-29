@@ -15,16 +15,8 @@ export default function Services() {
   return (
     <section id="services" className="py-12" style={{ background: "#000000" }}>
       <div className="max-w-6xl mx-auto px-6">
-        {/* Two photos at top */}
-        <Reveal>
-          <div className="grid grid-cols-2 gap-2.5 mb-8">
-            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&h=300&fit=crop&q=80" alt="" className="w-full h-36 object-cover rounded-lg" />
-            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&h=300&fit=crop&q=80" alt="" className="w-full h-36 object-cover rounded-lg" />
-          </div>
-        </Reveal>
-
         {/* Heading */}
-        <Reveal delay={80}>
+        <Reveal>
           <h2 className="display text-white text-3xl sm:text-4xl text-center mb-8">Services</h2>
         </Reveal>
 
